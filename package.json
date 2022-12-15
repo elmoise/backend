@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/elmoise/nodejs/issues"
   },
-  "homepage": "https://github.com/elmoise/nodejs#readme"
+  "homepage": "https://github.com/elmoise/nodejs#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
