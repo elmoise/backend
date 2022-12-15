@@ -19,7 +19,7 @@ var con = mysql.createPool({
 });
 
 
-app.post('/api/etat', (req, res, next) => {
+app.post('/etat', (req, res, next) => {
   con.getConnection(function(err) {
     if (err) throw err;
     console.log("Connected!");
@@ -51,7 +51,7 @@ app.post('/api/etat', (req, res, next) => {
 
 
 
-app.post('/api/eteindre', (req, res, next) => {
+app.post('/eteindre', (req, res, next) => {
   con.getConnection(function(err) {
     if (err) throw err;
     console.log("Connected!");
@@ -76,7 +76,7 @@ app.post('/api/eteindre', (req, res, next) => {
  
 });
 
-app.get('/api/get', (req, res, next) => {
+app.get('/get', (req, res, next) => {
   con.getConnection(function(err) {
     if (err) throw err;
     con.query("SELECT action from node_red ORDER BY id DESC LIMIT 1", function (err, result, fields) {
